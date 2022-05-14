@@ -1,0 +1,4 @@
+name = input()
+number_of_projects = int(input())
+hours_nedded = 3* number_of_projects
+print(f"The architect {name} will need {hours_nedded} hours to complete {number_of_projects} project/s.")
