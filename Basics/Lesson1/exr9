@@ -1,0 +1,6 @@
+total_area = float(input())
+sum_of_gardened_area = total_area * 7.61
+discount = sum_of_gardened_area * 0.18
+final_price = sum_of_gardened_area - discount
+print("The final price is: " + "%.2f" % final_price + " lv.")
+print(f"The discount is: " + "%.2f" % discount + " lv.")
