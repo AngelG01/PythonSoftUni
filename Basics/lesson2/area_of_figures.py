@@ -10,7 +10,7 @@ elif figure == "rectangle":
     area = side_a*side_b
 elif figure == "circle":
     radius = float(input())
-    area = pi*radius*radius
+    area = pi*(radius ** 2)
 elif figure == "triangle":
     side = float(input())
     height = float(input())
