@@ -7,7 +7,7 @@ from scoreboard import Scoreboard
 # Screen setup
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.bgcolor('green')
+screen.bgcolor('black')
 screen.title('Snake Game')
 
 segments = []
@@ -42,14 +42,14 @@ while game_is_on:
     # Detect for collision with wall
 
     if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
-        game_is_on = False
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset_snake_position()
 
     # Detect for collision with tail
 
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset_snake_position()
 
 screen.exitonclick()
