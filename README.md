@@ -1,3 +1,3 @@
 # PythonSoftUni
 
-Here are all f my homeworks from all the courses for python in SoftUni 
+Here are all of my homeworks from all the courses for python in SoftUni 
