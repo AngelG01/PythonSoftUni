@@ -4,11 +4,11 @@ daily_food = [int(x) for x in input().split(', ')]
 daily_stamina = deque(int(x) for x in input().split(', '))
 
 mountains = [
-    ['Vihren', 80],
-    ['Kutelo', 90],
-    ['Banski Suhodol', 100],
-    ['Polezhan', 60],
-    ['Kamenitza', 70],
+    ('Vihren', 80),
+    ('Kutelo', 90),
+    ('Banski Suhodol', 100),
+    ('Polezhan', 60),
+    ('Kamenitza', 70),
 ]
 conquered_peaks = []
 peak_tracker = 0
