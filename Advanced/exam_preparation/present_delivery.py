@@ -61,8 +61,9 @@ for colum in matrix:
     if 'V' in colum:
         non_happy_kids += colum.count('V')
 
-if non_happy_kids > 0:
+if non_happy_kids > 0 and number_of_presents == 0:
     print('Santa ran out of presents!')
+
 
 for r in matrix:
     print(*r)
