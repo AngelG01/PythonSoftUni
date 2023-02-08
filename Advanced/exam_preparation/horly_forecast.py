@@ -21,8 +21,3 @@ def forecast(*args):
             rainy += f'{key} - {value}\n'
 
     return sunny + cloudy + rainy
-
-
-print(forecast(
-    ("Tokyo", "Rainy"),
-    ("Sofia", "Rainy")))
