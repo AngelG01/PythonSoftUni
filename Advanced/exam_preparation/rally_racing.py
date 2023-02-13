@@ -4,9 +4,9 @@ car_position = [0, 0]
 matrix = []
 total_distance = 0
 
-for r in range(size):
-    column = input().split(' ')
-    matrix.append(column)
+for ri in range(size):
+    colu = input().split(' ')
+    matrix.append(colu)
 
 moves = {
     'up': (-1, 0),
@@ -18,11 +18,11 @@ moves = {
 direction = input()
 
 
-def search_for_tunnel(row, col):
+def search_for_tunnel(row, column):
     for r in range(len(matrix)):
         for c in range(len(matrix[r])):
             if matrix[r][c] == 'T':
-                if r != row and c != col:
+                if r != row or c != column:
                     matrix[r][c] = '.'
                     return [r, c]
 
@@ -32,7 +32,7 @@ while True:
     if direction == 'End':
         print(f'Racing car {racing_number} DNF.')
         print(f'Distance covered {total_distance} km.')
-        matrix[row][col] = 'C'
+        matrix[car_position[0]][car_position[1]] = 'C'
         [print(''.join(row)) for row in matrix]
         break
 
