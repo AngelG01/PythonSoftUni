@@ -33,8 +33,3 @@ print(
         'charm',
         'eye'
   ))
-print(
-    words_sorting(
-        'cacophony',
-        'accolade'
-  ))
