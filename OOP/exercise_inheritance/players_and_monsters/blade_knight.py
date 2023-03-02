@@ -1,0 +1,5 @@
+from OOP.exercise_inheritance.players_and_monsters.project.dark_knight import DarkKnight
+
+
+class BladeKnight(DarkKnight):
+    pass
