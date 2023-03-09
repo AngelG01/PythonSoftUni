@@ -1,5 +1,5 @@
-from OOP.exercise_static_and_class_methods.movie_world.project.customer import Customer
-from OOP.exercise_static_and_class_methods.movie_world.project.dvd import DVD
+from project.customer import Customer
+from project.dvd import DVD
 
 
 class MovieWorld:
