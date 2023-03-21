@@ -6,7 +6,7 @@ class Booth(ABC):
     def __init__(self, booth_number: int, capacity: int):
         self.booth_number = booth_number
         self.capacity = capacity
-        self.delicacy_order = []
+        self.delicacy_orders = []
         self.price_for_reservation = 0
         self.is_reserved = False
 
