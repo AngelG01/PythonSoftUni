@@ -58,19 +58,19 @@ class ChristmasPastryShopApp:
         booth = [b for b in self.booths if b.booth_number == booth_number][0]
         dish = [d for d in self.delicacies if d.name == delicacy_name][0]
 
-        booth.delicacy_order.append(dish)
+        booth.delicacy_orders.append(dish)
         return f'Booth {booth_number} ordered {delicacy_name}.'
 
     def leave_booth(self, booth_number: int):
         for booth in self.booths:
             if booth.booth_number == booth_number:
                 total = booth.price_for_reservation
-                food_total = sum(d.price for d in booth.delicacy_order)
+                food_total = sum(d.price for d in booth.delicacy_orders)
                 final_cost = total + food_total
 
                 self.income += final_cost
 
-                booth.delicacy_order = []
+                booth.delicacy_orders = []
                 booth.is_reserved = False
                 booth.price_for_reservation = 0
 
