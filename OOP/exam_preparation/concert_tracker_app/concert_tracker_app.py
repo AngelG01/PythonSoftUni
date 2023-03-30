@@ -101,21 +101,10 @@ class ConcertTrackerApp:
         curr_band.members.remove(curr_member)
         return f'{musician_name} was removed from {band_name}.'
 
-    def __find_band_by_name(self, name: str):
-        for band in self.bands:
-            if band.name == name:
-                return band
-        else:
-            raise Exception(f"{name} isn't a band!")
-
-    def __find_concert_by_place(self, place: str):
-        for concert in self.concerts:
-            if concert.place == place:
-                return concert
-
+   
     def start_concert(self, concert_place: str, band_name: str):
-        band = self.__find_band_by_name(band_name)
-        concert = self.__find_concert_by_place(concert_place)
+        band = [band for band in self.bands if band.name == band_name][0]
+        concert = [concert for concert in self.concerts if concert.place == concert_place][0]
         for musician_type in ["Drummer", "Singer", "Guitarist"]:
             if not any(
                     filter(
