@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    'books_project.books_api.apps',
+    'books_project.books_api',
     'rest_framework',
 ]
 
